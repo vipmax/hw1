@@ -1,7 +1,7 @@
 hw1
 ===
 
-This is home work for epum java course              get project: download zip  ----->
+This is home work for epum java course...........................              get project: download zip  ----->
 
 
 For open project needs  IDEA 13.1 Ultimate Edition and jdk 1.8
