@@ -1,12 +1,18 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 public class Task2 {
 
 
+    /**
+     * shortest strings first
+     * @param sourceStrings source strings
+     * @return sorted strings array
+     */
     public String[] sortStringsByLenght(String... sourceStrings) {
         List<String> listString = new ArrayList<String>();
 
@@ -14,7 +20,7 @@ public class Task2 {
             listString.add(str);
         }
 
-        java.util.Collections.sort(listString, new Comparator<String>() {
+        Collections.sort(listString, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
                 return o1.length() - o2.length();
@@ -24,6 +30,12 @@ public class Task2 {
 
         return General.toStringArray(listString);
     }
+
+    /**
+     * longest strings first
+     * @param sourceStrings
+     * @return sorted strings array
+     */
     public String[] sortStringsByLenghtDesk(String... sourceStrings) {
         List<String> listString = new ArrayList<String>();
 
