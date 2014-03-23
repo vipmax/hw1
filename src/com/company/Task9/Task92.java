@@ -1,10 +1,12 @@
-package com.company;
+package com.company.Task9;
+
+import com.company.General;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Task2 {
+public class Task92 {
 
 
     /**
@@ -48,13 +50,16 @@ public class Task2 {
 
 
     public static void main(String... args) {
-
-        Task2 task2 = new Task2();
-        String[] inputStrings = General.inputStrings();
+        if(args.length==0){
+            System.out.println("Нет аргументов командной строки");
+            return;
+        }
+        Task92 task92 = new Task92();
+        String[] inputStrings = args;
         System.out.println("Сортировка по длине: ");
-        General.showStrings(task2.sortStringsByLenght(inputStrings));
+        General.showStrings(task92.sortStringsByLenght(inputStrings));
         System.out.println("Сортировка по длине в обратном порядке: ");
-        General.showStrings(task2.sortStringsByLenghtDesk(inputStrings));
+        General.showStrings(task92.sortStringsByLenghtDesk(inputStrings));
 
 
     }

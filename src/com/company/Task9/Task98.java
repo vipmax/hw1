@@ -1,4 +1,6 @@
-package com.company;
+package com.company.Task9;
+
+import com.company.General;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +10,8 @@ import java.util.regex.Pattern;
 /**
  * Created by max on 23.03.2014.
  */
-public class Task8 {
+public class Task98 {
+
     /**
      *
      * @param word source word
@@ -41,7 +44,7 @@ public class Task8 {
     /**
      * Consisting only of digits word palindrome.If more than one of these words returns the second of them.
      * @param words source words
-     * @return first word-polindrom. If more than one of these words returns the second of them.
+     * @return first word-polindrom.If more than one of these words returns the second of them.
      */
     public String getPilondromNumberWord(String... words) {
 
@@ -75,9 +78,13 @@ public class Task8 {
 
 
     public static void main(String[] args) {
-        Task8 task8 = new Task8();
-        String[] words = General.inputWords();
-        General.showStrings(task8.getPilondromNumberWord(words));
+        if(args.length==0){
+            System.out.println("Нет аргументов командной строки");
+            return;
+        }
+        Task98 task98 = new Task98();
+        String[] words = args;
+        General.showStrings(task98.getPilondromNumberWord(words));
 
 
     }
