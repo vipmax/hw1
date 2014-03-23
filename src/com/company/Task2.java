@@ -32,7 +32,7 @@ public class Task2 {
     /**
      * longest strings first
      *
-     * @param sourceStrings
+     * @param sourceStrings source strings
      * @return sorted strings array
      */
     public String[] sortStringsByLenghtDesk(String... sourceStrings) {
