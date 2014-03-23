@@ -10,6 +10,7 @@ public class Task2 {
 
     /**
      * shortest strings first
+     *
      * @param sourceStrings source strings
      * @return sorted strings array
      */
@@ -20,12 +21,7 @@ public class Task2 {
             listString.add(str);
         }
 
-        Collections.sort(listString, new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o1.length() - o2.length();
-            }
-        });
+        Collections.sort(listString, (a, b) -> a.length() - b.length());         //WOW!!!    lambdas since java 8
 
 
         return General.toStringArray(listString);
@@ -33,6 +29,7 @@ public class Task2 {
 
     /**
      * longest strings first
+     *
      * @param sourceStrings
      * @return sorted strings array
      */
@@ -43,12 +40,7 @@ public class Task2 {
             listString.add(str);
         }
 
-        java.util.Collections.sort(listString, new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o2.length() - o1.length();
-            }
-        });
+        java.util.Collections.sort(listString, (a, b) -> b.length() - a.length());  //lambdas since java 8
 
 
         return General.toStringArray(listString);
