@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class Task2 {
 
@@ -24,7 +25,8 @@ public class Task2 {
         Collections.sort(listString, (a, b) -> a.length() - b.length());         //WOW!!!    lambdas since java 8
 
 
-        return General.toStringArray(listString);
+        return  listString.toArray(new String[0]);
+
     }
 
     /**
@@ -43,7 +45,7 @@ public class Task2 {
         java.util.Collections.sort(listString, (a, b) -> b.length() - a.length());  //lambdas since java 8
 
 
-        return General.toStringArray(listString);
+        return listString.toArray(new String[0]);
     }
 
 

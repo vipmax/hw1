@@ -51,19 +51,8 @@ public class General {
         }
     }
 
-    /**
-     *
-     * @param list list of strings
-     * @return array of source strings
-     */
-    public static String[] toStringArray(java.util.Collection<String> list) {
-        String[] result = new String[list.size()];
-        java.util.Iterator<String> it = list.iterator();
-        for (int i = 0; i < list.size(); i++) {
-            result[i] = it.next();
-        }
-        return result;
-    }
+
+
 
     /**
      *

@@ -29,7 +29,7 @@ public class Task1 {
                 result.add(s);
         }
 
-        return General.toStringArray(result);
+        return result.toArray(new String[0]);
 
     }
 
@@ -54,7 +54,7 @@ public class Task1 {
         }
 
 
-        return General.toStringArray(result);
+        return result.toArray(new String[0]);
 
     }
 

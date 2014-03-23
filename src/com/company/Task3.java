@@ -18,7 +18,7 @@ public class Task3 {
                 result.add(s);
             }
         }
-        return General.toStringArray(result);
+        return result.toArray(new String[0]);
     }
 
     public String[] getStringsMoreAVGLenght(String... sourseStrings) {
@@ -31,7 +31,7 @@ public class Task3 {
                 result.add(s);
             }
         }
-        return General.toStringArray(result);
+        return result.toArray(new String[0]);
     }
 
     public static void main(String[] args) {
