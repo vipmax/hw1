@@ -95,7 +95,6 @@ public class Task10 {
 
     public static void main(String[] args) {
         Task10 task10 = new Task10();
-        Boolean isExeption = false;
         System.out.println("Введите число: ");
         task10.findIntervall(new Scanner(System.in).nextDouble());
 
