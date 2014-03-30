@@ -1,8 +1,6 @@
 package com.company;
 
-import java.util.ArrayList;
 import java.util.Hashtable;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -10,7 +8,11 @@ import java.util.Map;
  */
 public class Task7 {
 
-
+    /**
+     *
+     * @param word source word
+     * @return count of different symbol
+     */
     public Integer countOfDifferentSymbolInWord(String word) {
 
         if (word.isEmpty())
@@ -24,6 +26,11 @@ public class Task7 {
         return map.size();
     }
 
+    /**
+     *
+     * @param words source words
+     * @return  word with different symbol
+     */
     public String wordFromDifferentSymbols(String... words){
 
         for (String word : words) {
@@ -37,10 +44,12 @@ public class Task7 {
     }
 
     public static void main(String[] args) {
+        System.out.println("7.Ввести n слов с консоли. Найти слово, состоящее только из различных символов. Если таких слов несколько, найти первое из них.");
         Task7 task7 = new Task7();
         String[] words = General.inputWords();
         System.out.println("Первое слово, состоящее только из различных символов: ");
         System.out.println(task7.wordFromDifferentSymbols(words));
+        General.printInfo();
 
 
     }

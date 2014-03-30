@@ -72,6 +72,8 @@ public class Task91 {
         General.showStrings(task91.getLongestString(inputStrings));
         System.out.println("Самая короткая: ");
         General.showStrings(task91.getShortestString(inputStrings));
+        General.printInfo();
+
     }
 }
 

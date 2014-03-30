@@ -1,7 +1,7 @@
 package com.company.Task9;
 
 
-import com.company.Task4;
+import com.company.General;
 
 import java.util.Hashtable;
 import java.util.Map;
@@ -55,6 +55,7 @@ public class Task94 {
         System.out.println("Cлово, в котором число различных символов минимально: ");
         String word = task94.stringWhereNumberDifferentSymbolsIsMinimal(inputWords);
         System.out.println(word + " различных символов : "+ task94.countOfDifferentSymbolInWord(word));
+        General.printInfo();
 
     }
 }

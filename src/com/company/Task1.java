@@ -60,12 +60,14 @@ public class Task1 {
 
 
     public static void main(String... args) {
+        System.out.println("1.Ввести n строк с консоли, найти самую короткую и самую длинную строки. Вывести найденные строки и их длину.");
         Task1 task1 = new Task1();
         String[] inputStrings = General.inputStrings();
         System.out.println("Самая длинная: ");
         General.showStrings(task1.getLongestString(inputStrings));
         System.out.println("Самая короткая: ");
         General.showStrings(task1.getShortestString(inputStrings));
+        General.printInfo();
     }
 }
 

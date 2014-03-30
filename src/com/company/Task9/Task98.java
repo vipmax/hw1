@@ -85,7 +85,6 @@ public class Task98 {
         Task98 task98 = new Task98();
         String[] words = args;
         General.showStrings(task98.getPilondromNumberWord(words));
-
-
+        General.printInfo();
     }
 }

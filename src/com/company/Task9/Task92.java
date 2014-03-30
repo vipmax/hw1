@@ -60,6 +60,7 @@ public class Task92 {
         General.showStrings(task92.sortStringsByLenght(inputStrings));
         System.out.println("Сортировка по длине в обратном порядке: ");
         General.showStrings(task92.sortStringsByLenghtDesk(inputStrings));
+        General.printInfo();
 
 
     }

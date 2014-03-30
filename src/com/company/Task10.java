@@ -7,44 +7,12 @@ import java.util.Scanner;
  */
 public class Task10 {
 
+
+    /**
+     * find interval
+     * @param k number
+     */
     void findInterval(Double k) {
-        final int mTenK_to_zero = 1;
-        final int zero_to_five = 2;
-        final int five_to_ten = 3;
-        final int ten_to_tenK = 4;
-
-        int m = 0;
-        if (k > -10000 && k <= 0) m = mTenK_to_zero;
-        else if (k > 0 && k <= 5) m = zero_to_five;
-        else if (k > 5 && k <= 10) m = five_to_ten;
-        else if (k > 10 && k <= 10000) m = ten_to_tenK;
-
-        String s = null;
-        switch (m) {
-            case mTenK_to_zero:
-                s = "(-10K, 0]";
-                break;
-            case zero_to_five:
-                s = "(0, 5]";
-                break;
-            case five_to_ten:
-                s = "(5, 10]";
-                break;
-            case ten_to_tenK:
-                s = "(10, 10K]";
-                break;
-        }
-
-        if (s == null) {
-
-            System.out.println("k not in range");
-        } else {
-
-            System.out.println(k + " in range: " + s);
-        }
-    }
-
-    void findIntervall(Double k) {
 
         final int i = k.intValue();
         System.out.println(i);
@@ -94,10 +62,11 @@ public class Task10 {
     }
 
     public static void main(String[] args) {
+        System.out.println("10.Используя оператор switch, написать программу, которая выводит на экран сообщения о принадлежности некоторого значения k интервалам (-10k, 0], (0, 5], (5, 10], (10, 10k].");
         Task10 task10 = new Task10();
         System.out.println("Введите число: ");
-        task10.findIntervall(new Scanner(System.in).nextDouble());
-
+        task10.findInterval(new Scanner(System.in).nextDouble());
+        General.printInfo();
 
     }
 }

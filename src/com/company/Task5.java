@@ -50,11 +50,12 @@ public class Task5 {
     }
 
     public static void main(String[] args) {
+        System.out.println("5.Ввести n слов с консоли. Найти количество слов, содержащих только символы латинского алфавита, а среди них – количество слов с равным числом гласных и согласных букв.");
         Task5 task5 = new Task5();
 
         String[] str = General.inputWords();
         System.out.println("Количество слов, содержащих только символы латинского алфавита, а среди них – количество слов с равным числом гласных и согласных букв: ");
         System.out.println(task5.findThatStrings(str));
-
+        General.printInfo();
     }
 }

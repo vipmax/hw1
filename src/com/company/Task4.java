@@ -43,11 +43,13 @@ public class Task4 {
 
 
     public static void main(String[] args) {
+        System.out.println("4.Ввести n слов с консоли. Найти слово, в котором число различных символов минимально. Если таких слов несколько, найти первое из них.");
         Task4 task4 = new Task4();
         String[] inputWords = General.inputWords();
         System.out.println("Cлово, в котором число различных символов минимально: ");
         String word = task4.stringWhereNumberDifferentSymbolsIsMinimal(inputWords);
         System.out.println(word + " различных символов : "+ task4.countOfDifferentSymbolInWord(word));
+        General.printInfo();
 
     }
 }

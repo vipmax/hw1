@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -66,6 +67,16 @@ public class General {
         }
         Integer result = totalLength / sourceStrings.length;
         return result;
+    }
+
+    /**
+     * print develop info
+     */
+    public static  void printInfo(){
+        System.out.println();
+        System.out.println("Разработчик: Петров М.В.");
+        System.out.println("Дата полученя задания: 14.03.2014 20:00");
+        System.out.println("Дата сдачи задания: " + new Date(2014,3,30,16,00));
     }
 
 

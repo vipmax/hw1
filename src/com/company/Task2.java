@@ -48,13 +48,14 @@ public class Task2 {
 
 
     public static void main(String... args) {
-
+        System.out.println("2.Ввести n строк с консоли. Упорядочить и вывести строки в порядке возрастания (убывания) значений их длины.");
         Task2 task2 = new Task2();
         String[] inputStrings = General.inputStrings();
         System.out.println("Сортировка по длине: ");
         General.showStrings(task2.sortStringsByLenght(inputStrings));
         System.out.println("Сортировка по длине в обратном порядке: ");
         General.showStrings(task2.sortStringsByLenghtDesk(inputStrings));
+        General.printInfo();
 
 
     }

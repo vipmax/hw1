@@ -60,6 +60,7 @@ public class Task95 {
         String[] str = args;
         System.out.println("Количество слов, содержащих только символы латинского алфавита, а среди них – количество слов с равным числом гласных и согласных букв: ");
         System.out.println(task95.findThatStrings(str));
+        General.printInfo();
 
     }
 }

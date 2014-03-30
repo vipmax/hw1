@@ -35,6 +35,7 @@ public class Task3 {
     }
 
     public static void main(String[] args) {
+        System.out.println("3.Ввести n строк с консоли. Вывести на консоль те строки, длина которых меньше (больше) средней, а также длину.");
         Task3 task3 = new Task3();
         String[] inputStrings = General.inputStrings();
         System.out.println("Средняя длина строк: " + General.findAVGLength(inputStrings));
@@ -42,5 +43,6 @@ public class Task3 {
         General.showStrings(task3.getStringsLessAVGLenght(inputStrings));
         System.out.println("Строки, длина которых больше средней:  ");
         General.showStrings(task3.getStringsMoreAVGLenght(inputStrings));
+        General.printInfo();
     }
 }

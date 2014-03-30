@@ -75,10 +75,11 @@ public class Task8 {
 
 
     public static void main(String[] args) {
+        System.out.println("8.Ввести n слов с консоли. Среди слов, состоящих только из цифр, найти слово-палиндром. Если таких слов больше одного, найти второе из них.");
         Task8 task8 = new Task8();
         String[] words = General.inputWords();
         General.showStrings(task8.getPilondromNumberWord(words));
-
+        General.printInfo();
 
     }
 }

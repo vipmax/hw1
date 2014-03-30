@@ -11,7 +11,11 @@ import java.util.Map;
 public class Task97 {
 
 
-
+    /**
+     *
+     * @param word source word
+     * @return count of different symbol
+     */
     public Integer countOfDifferentSymbolInWord(String word) {
 
         if (word.isEmpty())
@@ -24,7 +28,11 @@ public class Task97 {
 
         return map.size();
     }
-
+    /**
+     *
+     * @param words source words
+     * @return  word with different symbol
+     */
     public String wordFromDifferentSymbols(String... words){
 
         for (String word : words) {
@@ -46,6 +54,7 @@ public class Task97 {
         String[] words = args;
         System.out.println("Первое слово, состоящее только из различных символов: ");
         System.out.println(task97.wordFromDifferentSymbols(words));
+        General.printInfo();
 
 
     }

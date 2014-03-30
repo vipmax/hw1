@@ -56,12 +56,14 @@ public class Task6 {
 
 
     public static void main(String[] args) {
+        System.out.println("6.Ввести n слов с консоли. Найти слово, символы в котором идут в строгом порядке возрастания их кодов.Если таких слов несколько, найти первое из них.");
         Task6 task6 = new Task6();
         String[] words = General.inputWords();
         task6.showWordsCodeSymbol(words);
         String word = task6.wordSymbolCodeAsk(words);
         System.out.println("Первое слово, символы в котором идут в строгом порядке возрастания их кодов: "+ word);
         task6.showWordsCodeSymbol(word);
+        General.printInfo();
 
 
     }

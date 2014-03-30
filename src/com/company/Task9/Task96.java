@@ -68,6 +68,7 @@ public class Task96 {
         String word = task96.wordSymbolCodeAsk(words);
         System.out.println("Первое слово, символы в котором идут в строгом порядке возрастания их кодов: " + word);
         task96.showWordsCodeSymbol(word);
+        General.printInfo();
 
 
     }

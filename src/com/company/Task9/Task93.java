@@ -53,5 +53,7 @@ public class Task93 {
         General.showStrings(task93.getStringsLessAVGLenght(inputStrings));
         System.out.println("Строки, длина которых больше средней:  ");
         General.showStrings(task93.getStringsMoreAVGLenght(inputStrings));
+        General.printInfo();
+
     }
 }
