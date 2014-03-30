@@ -35,7 +35,9 @@ public class Task8 {
                 result.add(word);
             }
         }
-        return result.toArray(new String[0]);
+        if(!result.isEmpty())
+            return result.toArray(new String[0]);
+        return null;
     }
 
     /**
@@ -46,6 +48,7 @@ public class Task8 {
     public String getPilondromNumberWord(String... words) {
 
         words = getNumberWords(words);
+        if(words==null) return null;
         boolean isOk = true;
         List<String> result = new ArrayList<>();
         for (String word : words) {
@@ -64,6 +67,7 @@ public class Task8 {
             isOk = true;
 //            System.out.println("");
         }
+        if(result.isEmpty()) return null;
         if (result.size()>1)
             return result.get(1);
 
@@ -78,7 +82,14 @@ public class Task8 {
         System.out.println("8.Ввести n слов с консоли. Среди слов, состоящих только из цифр, найти слово-палиндром. Если таких слов больше одного, найти второе из них.");
         Task8 task8 = new Task8();
         String[] words = General.inputWords();
-        General.showStrings(task8.getPilondromNumberWord(words));
+
+        String s = task8.getPilondromNumberWord(words);
+        if(s!=null) {
+            System.out.println("Результат: ");
+            General.showStrings(s);
+        }
+        else System.out.println("Нет таких слов");
+
         General.printInfo();
 
     }

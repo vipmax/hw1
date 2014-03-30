@@ -28,6 +28,7 @@ public class Task97 {
 
         return map.size();
     }
+
     /**
      *
      * @param words source words
@@ -42,7 +43,7 @@ public class Task97 {
             }
         }
 
-        return  null;
+        return  "Нет таких слов";
     }
 
     public static void main(String[] args) {

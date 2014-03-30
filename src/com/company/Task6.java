@@ -27,7 +27,7 @@ public class Task6 {
             }
             isConditoinOk=true;
         }
-        return null;
+        return "Нет таких слов";
     }
 
     /**
@@ -46,7 +46,7 @@ public class Task6 {
      * @param words source words
      */
     public void showWordsCodeSymbol(String... words){
-
+        System.out.println("Коды: ");
         for (String word: words) {
             showWordCodeSymbol(word);
             System.out.println("");
@@ -62,7 +62,7 @@ public class Task6 {
         task6.showWordsCodeSymbol(words);
         String word = task6.wordSymbolCodeAsk(words);
         System.out.println("Первое слово, символы в котором идут в строгом порядке возрастания их кодов: "+ word);
-        task6.showWordsCodeSymbol(word);
+
         General.printInfo();
 
 

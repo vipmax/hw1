@@ -11,7 +11,6 @@ import java.util.regex.Pattern;
  * Created by max on 23.03.2014.
  */
 public class Task98 {
-
     /**
      *
      * @param word source word
@@ -38,17 +37,20 @@ public class Task98 {
                 result.add(word);
             }
         }
-        return result.toArray(new String[0]);
+        if(!result.isEmpty())
+            return result.toArray(new String[0]);
+        return null;
     }
 
     /**
      * Consisting only of digits word palindrome.If more than one of these words returns the second of them.
      * @param words source words
-     * @return first word-polindrom.If more than one of these words returns the second of them.
+     * @return first word-polindrom. If more than one of these words returns the second of them.
      */
     public String getPilondromNumberWord(String... words) {
 
         words = getNumberWords(words);
+        if(words==null) return null;
         boolean isOk = true;
         List<String> result = new ArrayList<>();
         for (String word : words) {
@@ -67,6 +69,7 @@ public class Task98 {
             isOk = true;
 //            System.out.println("");
         }
+        if(result.isEmpty()) return null;
         if (result.size()>1)
             return result.get(1);
 
@@ -75,16 +78,17 @@ public class Task98 {
 
     }
 
-
-
     public static void main(String[] args) {
-        if(args.length==0){
+        if (args.length == 0) {
             System.out.println("Нет аргументов командной строки");
             return;
         }
         Task98 task98 = new Task98();
         String[] words = args;
-        General.showStrings(task98.getPilondromNumberWord(words));
-        General.printInfo();
+        String s = task98.getPilondromNumberWord(words);
+        if (s != null) {
+            System.out.println("Результат: ");
+            General.showStrings(s);
+        } else System.out.println("Нет таких слов");
     }
 }

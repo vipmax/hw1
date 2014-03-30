@@ -40,7 +40,7 @@ public class Task7 {
             }
         }
 
-        return  null;
+        return  "Нет таких слов";
     }
 
     public static void main(String[] args) {
