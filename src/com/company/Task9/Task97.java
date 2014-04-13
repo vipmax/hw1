@@ -11,8 +11,21 @@ import java.util.Map;
 public class Task97 {
 
 
+    public static void main(String[] args) {
+        if (args.length == 0) {
+            System.out.println("Нет аргументов командной строки");
+            return;
+        }
+        Task97 task97 = new Task97();
+        String[] words = args;
+        System.out.println("Первое слово, состоящее только из различных символов: ");
+        System.out.println(task97.wordFromDifferentSymbols(words));
+        General.printInfo();
+
+
+    }
+
     /**
-     *
      * @param word source word
      * @return count of different symbol
      */
@@ -30,33 +43,17 @@ public class Task97 {
     }
 
     /**
-     *
      * @param words source words
-     * @return  word with different symbol
+     * @return word with different symbol
      */
-    public String wordFromDifferentSymbols(String... words){
+    public String wordFromDifferentSymbols(String... words) {
 
         for (String word : words) {
-            if(countOfDifferentSymbolInWord(word)==word.length())
-            {
+            if (countOfDifferentSymbolInWord(word) == word.length()) {
                 return word;
             }
         }
 
-        return  "Нет таких слов";
-    }
-
-    public static void main(String[] args) {
-        if(args.length==0){
-            System.out.println("Нет аргументов командной строки");
-            return;
-        }
-        Task97 task97 = new Task97();
-        String[] words = args;
-        System.out.println("Первое слово, состоящее только из различных символов: ");
-        System.out.println(task97.wordFromDifferentSymbols(words));
-        General.printInfo();
-
-
+        return "Нет таких слов";
     }
 }

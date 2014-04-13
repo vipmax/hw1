@@ -14,6 +14,23 @@ import java.util.List;
  */
 public class Task93 {
 
+    public static void main(String[] args) {
+        if (args.length == 0) {
+            System.out.println("Нет аргументов командной строки");
+            return;
+        }
+
+        Task93 task93 = new Task93();
+        String[] inputStrings = args;
+        System.out.println("Средняя длина строк: " + General.findAVGLength(inputStrings));
+        System.out.println("Строки, длина которых меньше средней:  ");
+        General.showStrings(task93.getStringsLessAVGLenght(inputStrings));
+        System.out.println("Строки, длина которых больше средней:  ");
+        General.showStrings(task93.getStringsMoreAVGLenght(inputStrings));
+        General.printInfo();
+
+    }
+
     public String[] getStringsLessAVGLenght(String... sourseStrings) {
 
         Integer avgLenght = General.findAVGLength(sourseStrings);
@@ -38,22 +55,5 @@ public class Task93 {
             }
         }
         return result.toArray(new String[0]);
-    }
-
-    public static void main(String[] args) {
-        if(args.length==0){
-            System.out.println("Нет аргументов командной строки");
-            return;
-        }
-
-        Task93 task93 = new Task93();
-        String[] inputStrings = args;
-        System.out.println("Средняя длина строк: " + General.findAVGLength(inputStrings));
-        System.out.println("Строки, длина которых меньше средней:  ");
-        General.showStrings(task93.getStringsLessAVGLenght(inputStrings));
-        System.out.println("Строки, длина которых больше средней:  ");
-        General.showStrings(task93.getStringsMoreAVGLenght(inputStrings));
-        General.printInfo();
-
     }
 }

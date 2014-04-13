@@ -2,7 +2,8 @@ package com.company.Task9;
 
 import com.company.General;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author vipmax
@@ -10,10 +11,26 @@ import java.util.*;
 public class Task91 {
 
 
+    public static void main(String... args) {
+        if (args.length == 0) {
+            System.out.println("Нет аргументов командной строки");
+            return;
+        }
+        Task91 task91 = new Task91();
+        String[] inputStrings = args;
+        System.out.println("Самая длинная: ");
+        General.showStrings(task91.getLongestString(inputStrings));
+        System.out.println("Самая короткая: ");
+        General.showStrings(task91.getShortestString(inputStrings));
+        General.printInfo();
+
+    }
+
     /**
      * method return most long strings
-     *@param sourceStrings vararg source strings
-     *@return longest strings
+     *
+     * @param sourceStrings vararg source strings
+     * @return longest strings
      */
     public String[] getLongestString(String... sourceStrings) {
 
@@ -36,8 +53,8 @@ public class Task91 {
     }
 
     /**
-     *@param sourceStrings vararg source strings
-     *@return shortest strings
+     * @param sourceStrings vararg source strings
+     * @return shortest strings
      */
     public String[] getShortestString(String... sourceStrings) {
 
@@ -57,22 +74,6 @@ public class Task91 {
 
 
         return result.toArray(new String[0]);
-
-    }
-
-
-    public static void main(String... args) {
-        if(args.length==0){
-            System.out.println("Нет аргументов командной строки");
-            return;
-        }
-        Task91 task91 = new Task91();
-        String[] inputStrings = args;
-        System.out.println("Самая длинная: ");
-        General.showStrings(task91.getLongestString(inputStrings));
-        System.out.println("Самая короткая: ");
-        General.showStrings(task91.getShortestString(inputStrings));
-        General.printInfo();
 
     }
 }

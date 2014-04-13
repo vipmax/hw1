@@ -11,8 +11,21 @@ import java.util.Map;
  */
 public class Task94 {
 
+    public static void main(String[] args) {
+        if (args.length == 0) {
+            System.out.println("Нет аргументов командной строки");
+            return;
+        }
+        Task94 task94 = new Task94();
+        String[] inputWords = args;
+        System.out.println("Первое слово, в котором число различных символов минимально: ");
+        String word = task94.stringWhereNumberDifferentSymbolsIsMinimal(inputWords);
+        System.out.println(word + " различных символов : " + task94.countOfDifferentSymbolInWord(word));
+        General.printInfo();
+
+    }
+
     /**
-     *
      * @param word source word
      * @return count Of Different SymbolIn Word
      */
@@ -30,7 +43,6 @@ public class Task94 {
     }
 
     /**
-     *
      * @param sourceString Strings who will handle
      * @return string where the number of different symbols is minimal
      */
@@ -42,20 +54,5 @@ public class Task94 {
             }
         }
         return result;
-    }
-
-
-    public static void main(String[] args) {
-        if(args.length==0){
-            System.out.println("Нет аргументов командной строки");
-            return;
-        }
-        Task94 task94 = new Task94();
-        String[] inputWords = args;
-        System.out.println("Первое слово, в котором число различных символов минимально: ");
-        String word = task94.stringWhereNumberDifferentSymbolsIsMinimal(inputWords);
-        System.out.println(word + " различных символов : "+ task94.countOfDifferentSymbolInWord(word));
-        General.printInfo();
-
     }
 }

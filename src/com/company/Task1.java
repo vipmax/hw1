@@ -1,62 +1,12 @@
 package com.company;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * @author vipmax
+ * Created by max on 22.03.2014.
  */
 public class Task1 {
-
-
-    /**
-     * method return most long strings
-     *@param sourceStrings vararg source strings
-     *@return longest strings
-     */
-    public String[] getLongestString(String... sourceStrings) {
-
-        Integer longest = sourceStrings[0].length();
-
-        for (String s : sourceStrings) {
-            if (s.length() > longest) {
-                longest = s.length();
-            }
-        }
-
-        List<String> result = new ArrayList<String>();
-        for (String s : sourceStrings) {
-            if (s.length() == longest)
-                result.add(s);
-        }
-
-        return result.toArray(new String[0]);
-
-    }
-
-    /**
-      *@param sourceStrings vararg source strings
-      *@return shortest strings
-     */
-    public String[] getShortestString(String... sourceStrings) {
-
-        Integer longest = sourceStrings[0].length();
-
-        for (String s : sourceStrings) {
-            if (s.length() < longest) {
-                longest = s.length();
-            }
-        }
-
-        List<String> result = new ArrayList<String>();
-        for (String s : sourceStrings) {
-            if (s.length() == longest)
-                result.add(s);
-        }
-
-
-        return result.toArray(new String[0]);
-
-    }
 
 
     public static void main(String... args) {
@@ -68,6 +18,50 @@ public class Task1 {
         System.out.println("Самая короткая: ");
         General.showStrings(task1.getShortestString(inputStrings));
         General.printInfo();
+    }
+
+    /**
+     * method return most long strings
+     *
+     * @param sourceStrings vararg source strings
+     * @return longest strings
+     */
+    public String[] getLongestString(String... sourceStrings) {
+
+        Integer longest = sourceStrings[0].length();
+        for (String s : sourceStrings) {
+            if (s.length() > longest) {
+                longest = s.length();
+            }
+        }
+        List<String> result = new ArrayList<String>();
+        for (String s : sourceStrings) {
+            if (s.length() == longest)
+                result.add(s);
+        }
+        return result.toArray(new String[0]);
+
+    }
+
+    /**
+     * @param sourceStrings vararg source strings
+     * @return shortest strings
+     */
+    public String[] getShortestString(String... sourceStrings) {
+
+        Integer longest = sourceStrings[0].length();
+        for (String s : sourceStrings) {
+            if (s.length() < longest) {
+                longest = s.length();
+            }
+        }
+        List<String> result = new ArrayList<String>();
+        for (String s : sourceStrings) {
+            if (s.length() == longest)
+                result.add(s);
+        }
+        return result.toArray(new String[0]);
+
     }
 }
 

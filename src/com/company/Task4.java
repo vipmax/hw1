@@ -8,8 +8,18 @@ import java.util.Map;
  */
 public class Task4 {
 
+    public static void main(String[] args) {
+        System.out.println("4.Ввести n слов с консоли. Найти слово, в котором число различных символов минимально. Если таких слов несколько, найти первое из них.");
+        Task4 task4 = new Task4();
+        String[] inputWords = General.inputWords();
+        System.out.println("Первое слово, в котором число различных символов минимально: ");
+        String word = task4.stringWhereNumberDifferentSymbolsIsMinimal(inputWords);
+        System.out.println(word + " различных символов : " + task4.countOfDifferentSymbolInWord(word));
+        General.printInfo();
+
+    }
+
     /**
-     *
      * @param word source word
      * @return count Of Different SymbolIn Word
      */
@@ -27,7 +37,6 @@ public class Task4 {
     }
 
     /**
-     *
      * @param sourceString Strings who will handle
      * @return string where the number of different symbols is minimal
      */
@@ -39,17 +48,5 @@ public class Task4 {
             }
         }
         return result;
-    }
-
-
-    public static void main(String[] args) {
-        System.out.println("4.Ввести n слов с консоли. Найти слово, в котором число различных символов минимально. Если таких слов несколько, найти первое из них.");
-        Task4 task4 = new Task4();
-        String[] inputWords = General.inputWords();
-        System.out.println("Первое слово, в котором число различных символов минимально: ");
-        String word = task4.stringWhereNumberDifferentSymbolsIsMinimal(inputWords);
-        System.out.println(word + " различных символов : "+ task4.countOfDifferentSymbolInWord(word));
-        General.printInfo();
-
     }
 }

@@ -12,8 +12,20 @@ import java.util.regex.Pattern;
  */
 public class Task95 {
 
+    public static void main(String[] args) {
+        if (args.length == 0) {
+            System.out.println("Нет аргументов командной строки");
+            return;
+        }
+        Task95 task95 = new Task95();
+        String[] str = args;
+        System.out.println("Количество слов, содержащих только символы латинского алфавита, а среди них – количество слов с равным числом гласных и согласных букв: ");
+        System.out.println(task95.findThatStrings(str));
+        General.printInfo();
+
+    }
+
     /**
-     *
      * @param sourceWords source words
      * @return latin words
      */
@@ -31,14 +43,15 @@ public class Task95 {
 
     /**
      * Number of words containing only Latin letters, and among them the number of words with an equal number of vowels and consonants
+     *
      * @param sourceWords source words
      * @return count of that strings
      */
-    public Integer findThatStrings(String...sourceWords){
+    public Integer findThatStrings(String... sourceWords) {
         String[] words = getLatinWords(sourceWords);
 
         List<String> result = new ArrayList<String>();
-        int vowelsCount=0, consonantsCount=0;
+        int vowelsCount = 0, consonantsCount = 0;
 
         for (String word : words) {
             vowelsCount = word.replaceAll("[^aeiou]", "").length();
@@ -49,18 +62,5 @@ public class Task95 {
             }
         }
         return result.size();
-    }
-
-    public static void main(String[] args) {
-        if(args.length==0){
-            System.out.println("Нет аргументов командной строки");
-            return;
-        }
-        Task95 task95 = new Task95();
-        String[] str = args;
-        System.out.println("Количество слов, содержащих только символы латинского алфавита, а среди них – количество слов с равным числом гласных и согласных букв: ");
-        System.out.println(task95.findThatStrings(str));
-        General.printInfo();
-
     }
 }

@@ -8,8 +8,18 @@ import java.util.Map;
  */
 public class Task7 {
 
+    public static void main(String[] args) {
+        System.out.println("7.Ввести n слов с консоли. Найти слово, состоящее только из различных символов. Если таких слов несколько, найти первое из них.");
+        Task7 task7 = new Task7();
+        String[] words = General.inputWords();
+        System.out.println("Первое слово, состоящее только из различных символов: ");
+        System.out.println(task7.wordFromDifferentSymbols(words));
+        General.printInfo();
+
+
+    }
+
     /**
-     *
      * @param word source word
      * @return count of different symbol
      */
@@ -27,30 +37,17 @@ public class Task7 {
     }
 
     /**
-     *
      * @param words source words
-     * @return  word with different symbol
+     * @return word with different symbol
      */
-    public String wordFromDifferentSymbols(String... words){
+    public String wordFromDifferentSymbols(String... words) {
 
         for (String word : words) {
-            if(countOfDifferentSymbolInWord(word)==word.length())
-            {
+            if (countOfDifferentSymbolInWord(word) == word.length()) {
                 return word;
             }
         }
 
-        return  "Нет таких слов";
-    }
-
-    public static void main(String[] args) {
-        System.out.println("7.Ввести n слов с консоли. Найти слово, состоящее только из различных символов. Если таких слов несколько, найти первое из них.");
-        Task7 task7 = new Task7();
-        String[] words = General.inputWords();
-        System.out.println("Первое слово, состоящее только из различных символов: ");
-        System.out.println(task7.wordFromDifferentSymbols(words));
-        General.printInfo();
-
-
+        return "Нет таких слов";
     }
 }
